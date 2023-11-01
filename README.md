@@ -1,2 +1,2 @@
 # js-yt
-Repo for JS series(Chai aur code)
+Repo for JS series(Code with Coffee)
