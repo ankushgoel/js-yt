@@ -83,7 +83,7 @@ const users = [
     }
 ]
 
-console.log(users[1].email);
+// console.log(users[1].email);
 
 // console.log(user);
 
@@ -91,4 +91,19 @@ console.log(users[1].email);
 // console.log(Object.values(user));
 // console.log(Object.entries(user));
 
-console.log(user.hasOwnProperty('isLoggedIn'));
+// console.log(user.hasOwnProperty('isLoggedIn'));
+
+
+// Destructuring
+const course = {
+    name: "js in hindi",
+    price: 999,
+    instructor: "ankush"
+}
+
+// console.log(course.instructor);
+
+// const {instructor} = course
+const {instructor: inst} = course
+
+console.log(inst);
