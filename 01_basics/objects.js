@@ -44,3 +44,51 @@ user.greeting2 = function() {
 // console.log(user.greeting()); // log expects return from func and prints it as undefined
 user.greeting()
 user.greeting2()
+
+
+
+const Jsuser = {
+    email: "ankush@mail.com",
+    fullname:  {
+        firstname: "Ankush",
+        lastname: "Goel"
+    }
+}
+
+console.log(Jsuser.fullname.firstname);
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+const obj3 = {5: "a", 6: "b"}
+
+// const obj5 = { obj1, obj2};
+// const obj5 = Object.assign({}, obj1, obj2, obj3);
+const obj5 = {...obj1, ...obj2}
+
+console.log(obj5);
+
+
+const users = [
+    {
+        id: 1,
+        email: "a@mail.com"
+    },
+    {
+        id: 2,
+        email: "b@mail.com"
+    },
+    {
+        id: 3,
+        email: "c@mail.com"
+    }
+]
+
+console.log(users[1].email);
+
+// console.log(user);
+
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
+
+console.log(user.hasOwnProperty('isLoggedIn'));
