@@ -38,3 +38,18 @@ const loggedInFromEmail = true
 if(loggedInFromGoogle || loggedInFromEmail) {
     console.log("user logged in")
 }
+
+
+// Nullish Coalescing Operator (??): null, undefined
+
+let val1;
+val1 = 5 ?? 10
+val1 = null ?? 10
+val1 = undefined ?? 15
+val1 = null ?? 15 ?? 20
+
+
+// Terniary Operator ?:
+
+const price = 100
+console.log(price <= 80 ? "less than 80" : "more than 80");
