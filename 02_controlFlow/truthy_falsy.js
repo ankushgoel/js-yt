@@ -6,13 +6,13 @@ if (email) {
     console.log("email doesn't exists");
 }
 
-const array = []
-if (array) {
+const myArray = []
+if (myArray) {
     console.log("truthy");
 } else {
     console.log("falsy");
 }
-if (array.length) {
+if (myArray.length) {
     console.log("not empty");
 } else {
     console.log("empty array");
