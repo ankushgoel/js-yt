@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="text-center">
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    let ele = document.getElementById("title")
+    console.log(ele)
+    // ele.innerHTML = "DOM Manipulation"
+
+    console.log(ele.id)
+    console.log(ele.class)
+    console.log(ele.className)
+
+    console.log(ele.getAttribute('id'))
+    console.log(ele.getAttribute('class'))
+
+    ele.setAttribute('class', 'test')
+
+    ele.style.backgroundColor = 'blue'
+
+    console.log(ele.innerHTML)
+    console.log(ele.innerText)
+    console.log(ele.textContent)
+
+    console.log(document.getElementsByClassName('heading'))
+
+    console.log(document.querySelector('h1'))
+    console.log(document.querySelector('#title'))
+    console.log(document.querySelector('.heading'))
+    console.log(document.querySelector('input[type="password"]'))
+
+    const myUL = document.querySelector('ul')
+    const firstListItem = myUL.querySelector('li')
+    firstListItem.style.color = 'red'
+
+    console.log(document.querySelectorAll('h1'))
+    const tempList = document.querySelectorAll('li')
+    console.log(tempList)
+    console.log(tempList[1]);
+    tempList[1].style.color = 'green'
+
+    tempList.forEach(function (li) { // Node Collection
+        li.style.padding = '10px'
+    })
+
+    console.log(document.getElementsByClassName('list-item')) // HTML Collection
+    const tempClassList = document.getElementsByClassName('list-item')
+    const classList = Array.from(tempClassList);
+
+    classList.forEach(function (li) { // Node Collection
+        li.style.color = 'orange'
+    })
+</script>
