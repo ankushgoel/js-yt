@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1>setTimeout</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(() => {
+        console.log("Ankush");
+    }, 1000);
+    
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+
+    const changeHeading = setTimeout(changeText, 2000)
+    
+    document.querySelector('#id').addEventListener('click', function() {
+        clearTimeout(changeHeading)
+        console.log("Stopped!")
+    })
+</script>
+</html>
